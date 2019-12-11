@@ -1,0 +1,29 @@
+.wrapper {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+}
+
+.no-wishlist {
+    color: darkgray;
+}
+
+mat-card {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-remove {
+    width: 100%;
+    text-align: end;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        width: 90%; 
+    }
+}

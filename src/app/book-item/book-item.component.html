@@ -1,0 +1,12 @@
+<div class="book-wrapper">
+    <div class="img-wrapper">
+        <img *ngIf="book.volumeInfo.imageLinks === undefined" src="../../assets/image/no_cover_thumb.gif"
+            [alt]="book.volumeInfo.title">
+        <img *ngIf="book.volumeInfo.imageLinks !== undefined" [src]="book.volumeInfo.imageLinks.thumbnail"
+            [alt]="book.volumeInfo.title">
+    </div>
+    <mat-card-content>
+        <p id="bookTitle" (click)="openBookDialog()">{{ book.volumeInfo.title }}</p>
+        <p id="bookAuthor">{{ book.volumeInfo.authors }}</p>
+    </mat-card-content>
+</div>

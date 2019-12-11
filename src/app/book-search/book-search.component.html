@@ -1,0 +1,11 @@
+<div class="search-wrapper">
+    <h1>Book Search</h1>
+    <div class="search-bar-wrapper">
+        <input [placeholder]="' search for a book'" name="searchInput" type="text" [(ngModel)]="searchInput"
+            (keyup)="getBooks()">
+        <button mat-flat-button color="primary" (click)="getBooks()">search</button>
+    </div>
+    <app-book-list></app-book-list>
+    <mat-paginator [length]="totalBooks" [pageSize]="booksPerPage" [pageSizeOptions]="pageSizeOptions"
+        (page)="onChangedPage($event)"></mat-paginator>
+</div>

@@ -1,0 +1,60 @@
+.search-wrapper {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .search-wrapper {
+        width: 90%; 
+    }
+
+    .search-bar-wrapper {
+        width: 50%;
+    }
+}
+
+@media (min-width: 700px) {
+    .search-wrapper {
+        width: 50%; 
+    }
+}
+
+.search-bar-wrapper {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+
+app-book-list {
+    width: 100%;
+}
+
+button {
+    padding: 0;
+}
+
+::ng-deep .mat-paginator 
+    .mat-paginator-container {
+        justify-content: center;
+}

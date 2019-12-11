@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <h1>My Wishlist</h1>
+    <div class="no-wishlist" *ngIf="(wishlist | async).length === 0">
+        No items in wishlist
+    </div>
+    <mat-card *ngFor="let book of (wishlist | async)">
+        <app-book-item [book]="book"></app-book-item>
+        <div class="btn-remove">
+            <button mat-button color="primary" (click)="removeFromWishlist(book)">Remove</button>
+        </div>
+    </mat-card>
+</div>

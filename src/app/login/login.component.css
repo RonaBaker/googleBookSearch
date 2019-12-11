@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.form-wrapper {
+    padding-top: 150px;
+}
+
+mat-form-field {
+    margin-top: 15px;
+}

@@ -1,0 +1,8 @@
+mat-card {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+app-book-item {
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+<div class="form-wrapper">
+    <h1>Login</h1>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input matInput [placeholder]="'Username'" id="username" name="username" type="text" [(ngModel)]="username" 
+                #usernameInput="ngModel" required>
+            <mat-error *ngIf="usernameInput.touched && usernameInput.invalid">Username is required</mat-error>
+        </mat-form-field>
+        <button mat-button [disabled]="loginForm.form.invalid" type="submit">Login</button>
+    </form>
+</div>

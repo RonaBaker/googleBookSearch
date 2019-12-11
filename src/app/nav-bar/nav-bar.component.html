@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="nav-tollbar">
+    <button mat-button routerLink="/home">
+        <mat-icon>home</mat-icon>
+    </button>
+    <div class="flex-spacer"></div>
+    <p *ngIf="loggedIn">Hello, {{ authService.currentUser | async}} </p>
+    <button *ngIf="loggedIn" mat-button routerLink="/mywishlist">My Wishlist</button>
+    <button mat-button (click)="login()">
+        <span *ngIf="loggedIn">Logout</span>
+        <span *ngIf="!loggedIn">Login</span>
+    </button>
+</mat-toolbar>
+<router-outlet></router-outlet>
